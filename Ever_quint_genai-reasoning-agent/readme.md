@@ -1,66 +1,22 @@
-🧠 Multi-Step Reasoning Agent with Self-Checking
-Overview
+# 🧠 Multi‑Step Reasoning Agent with Self‑Checking
 
-This project implements a GenAI reasoning agent that solves structured word problems using a multi-step reasoning process and verifies its own answers before responding to the user.
+A small but robust Gen‑AI agent that solves structured word problems step‑by‑step, verifies its own work, and returns a clean JSON answer object to the user. 
+---
 
-The agent is designed to provide correct final answers with brief explanations, without exposing full internal chain-of-thought.
+## ✨ Project Overview
 
-Problem Scope
+This project implements a **planner–executor–verifier** loop for math, logic, and constraint‑style word problems.
+The agent hides long chain‑of‑thought from the end user while still using it internally for planning, execution, and self‑checks.
 
-The agent handles:
+---
 
-Arithmetic and logical reasoning
+## 🎯 Problem Domain
 
-Time and duration calculations
+The agent handles short, structured word problems such as:
 
-Constraint-based decision problems
+- Time differences  
+- Simple arithmetic story problems  
+- Scheduling / constraint satisfaction questions  
 
-Input is a plain text question, and output is a structured response indicating success or failure.
 
-Agent Design
 
-The solution follows a three-phase pipeline:
-
-Planner – Analyzes the question and creates a step-by-step plan
-
-Executor – Performs the required reasoning and calculations
-
-Verifier – Validates the solution and triggers retries if needed
-
-This design improves reliability and reduces reasoning errors.
-
-Key Features
-
-Multi-step reasoning
-
-Self-verification before final output
-
-Retry mechanism on failed checks
-
-Clear separation of planning, execution, and verification logic
-
-Technology
-
-Python
-
-Large Language Model (LLM) API or mock interface
-
-Modular prompt and agent design
-
-Usage
-
-The agent can be run via:
-
-Command line interface
-
-Notebook function
-
-Simple API endpoint
-
-The focus is on agent logic rather than UI.
-
-Author
-
-R Muralidharan
-B.Tech – Instrumentation & Control Engineering, NIT Trichy
-GitHub: https://github.com/Muralidharan-ramachandran
